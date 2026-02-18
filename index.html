@@ -2,40 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RecipeJS - Functional Cooking</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>🍳 RecipeJS - Functional Cooking</h1>
-  </header>
+<header>
+  <h1>🍳 RecipeJS - Functional Cooking</h1>
+</header>
 
-  <section class="controls">
+<section class="controls">
+  <div>
+    <h3>Filter</h3>
+    <button class="filter-btn active" data-filter="all">Show All</button>
+    <button class="filter-btn" data-filter="easy">Easy</button>
+    <button class="filter-btn" data-filter="medium">Medium</button>
+    <button class="filter-btn" data-filter="hard">Hard</button>
+    <button class="filter-btn" data-filter="quick">Quick Recipes</button>
+  </div>
 
-    <div class="filters">
-      <h3>Filter</h3>
-      <button data-filter="all" class="active">Show All</button>
-      <button data-filter="easy">Easy</button>
-      <button data-filter="medium">Medium</button>
-      <button data-filter="hard">Hard</button>
-      <button data-filter="quick">Quick Recipes</button>
-    </div>
+  <div>
+    <h3>Sort</h3>
+    <button class="sort-btn active" data-sort="none">Default Order</button>
+    <button class="sort-btn" data-sort="name">Name (A-Z)</button>
+    <button class="sort-btn" data-sort="time">Time (Fastest First)</button>
+  </div>
+</section>
 
-    <div class="sort">
-      <h3>Sort</h3>
-      <button data-sort="none" class="active">Default Order</button>
-      <button data-sort="name">Name (A-Z)</button>
-      <button data-sort="time">Time (Fastest First)</button>
-    </div>
+<main>
+  <div id="recipe-container" class="recipe-grid"></div>
+</main>
 
-  </section>
-
-  <main>
-    <div id="recipe-container" class="recipe-grid"></div>
-  </main>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
