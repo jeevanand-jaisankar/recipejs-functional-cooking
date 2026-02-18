@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #ff7043;
+  color: white;
+}
+
+.search-container {
+  margin-top: 10px;
+}
+
+#search-input {
+  padding: 8px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+}
+
+#clear-search {
+  padding: 8px;
+  margin-left: 5px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.active {
+  background: #ff7043;
+  color: white;
+}
+
+#recipe-counter {
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.recipe-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: gray;
+}
+
+.favorite-btn.active {
+  color: red;
+}
+
+.toggle-section {
+  cursor: pointer;
+  color: #ff7043;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+}
