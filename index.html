@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>RecipeJS - Functional Cooking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RecipeJS - Functional Cooking Companion</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <h1>🍳 RecipeJS - Functional Cooking</h1>
+  <h1>🍳 RecipeJS</h1>
+
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search recipes..." />
+    <button id="clear-search" class="hidden">✖</button>
+  </div>
 </header>
 
-<section class="controls">
-  <div>
-    <h3>Filter</h3>
-    <button class="filter-btn active" data-filter="all">Show All</button>
-    <button class="filter-btn" data-filter="easy">Easy</button>
-    <button class="filter-btn" data-filter="medium">Medium</button>
-    <button class="filter-btn" data-filter="hard">Hard</button>
-    <button class="filter-btn" data-filter="quick">Quick Recipes</button>
-  </div>
-
-  <div>
-    <h3>Sort</h3>
-    <button class="sort-btn active" data-sort="none">Default Order</button>
-    <button class="sort-btn" data-sort="name">Name (A-Z)</button>
-    <button class="sort-btn" data-sort="time">Time (Fastest First)</button>
-  </div>
-</section>
-
 <main>
+  <div class="controls">
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="veg">Veg</button>
+      <button data-filter="non-veg">Non-Veg</button>
+      <button data-filter="favorites">Favorites ❤️</button>
+    </div>
+
+    <div class="sorts">
+      <button data-sort="default">Default</button>
+      <button data-sort="time">Time ⏱</button>
+      <button data-sort="rating">Rating ⭐</button>
+    </div>
+  </div>
+
+  <p id="recipe-counter"></p>
+
   <div id="recipe-container" class="recipe-grid"></div>
 </main>
 
